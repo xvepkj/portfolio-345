@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-row gap-6 items-center justify-center">
+    <div className="flex flex-col md:flex-row gap-6 items-center justify-center px-6 sm:px-8 md:px-12 py-6">
       
       {/* Mobile Developer */}
-      <div className="border px-8 py-12 w-72 text-center shadow-md flex flex-col items-center justify-center">
+      <div className="border px-6 sm:px-8 py-10 sm:py-12 w-72 text-center shadow-md flex flex-col items-center justify-center">
         <Image 
           src="/icons/mobile.png" 
           alt="Mobile Developer" 
@@ -17,7 +17,7 @@ export default function HomePage() {
       </div>
 
       {/* Competitive Programmer */}
-      <div className="border px-8 py-12 w-72 text-center shadow-md flex flex-col items-center justify-center">
+      <div className="border px-6 sm:px-8 py-10 sm:py-12 w-65 text-center shadow-md flex flex-col items-center justify-center">
         <Image 
           src="/icons/pc.png" 
           alt="Competitive Programmer" 
@@ -29,7 +29,7 @@ export default function HomePage() {
       </div>
 
       {/* Game Developer - Smaller */}
-      <div className="border px-6 py-10 w-60 text-center shadow-md flex flex-col items-center justify-center">
+      <div className="border px-5 sm:px-6 py-8 sm:py-10 w-55 text-center shadow-md flex flex-col items-center justify-center">
         <Image 
           src="/icons/game.png" 
           alt="Game Developer" 

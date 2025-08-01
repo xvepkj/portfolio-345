@@ -1,14 +1,14 @@
 export default function WorkPage() {
   return (
-    <main className="flex flex-col items-center gap-12 py-12 max-w-4xl mx-auto">
+    <main className="flex flex-col items-center gap-12 py-8 sm:py-12 px-4 sm:px-6 md:px-0 max-w-4xl mx-auto">
 
       {/* ParallelDots */}
-      <div className="w-full border rounded-lg shadow-lg p-6">
+      <div className="w-full border rounded-lg shadow-lg p-4 sm:p-6">
         <h2 className="font-bold text-xl text-blue-600">
           ParallelDots (US Retail Solutions)
         </h2>
         <p className="text-gray-700 font-semibold">
-          Software Engineer • ~3 years • September 2023 - Present
+          Software Engineer • September 2023 - Present
         </p>
         <ul className="list-disc ml-5 mt-2 space-y-2 text-sm text-gray-800">
           <li>
@@ -30,7 +30,7 @@ export default function WorkPage() {
       </div>
 
       {/* Flobiz */}
-      <div className="w-full border rounded-lg shadow-lg p-6">
+      <div className="w-full border rounded-lg shadow-lg p-4 sm:p-6">
         <h2 className="font-bold text-xl text-blue-600">
           Flobiz (Fintech Startup - 1M DAU)
         </h2>
