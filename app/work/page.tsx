@@ -4,7 +4,7 @@ export default function WorkPage() {
 
       {/* ParallelDots */}
       <div className="w-full border rounded-lg shadow-lg p-4 sm:p-6">
-        <h2 className="font-bold text-xl text-blue-600">
+        <h2 className="text-xl text-blue-600">
           ParallelDots (US Retail Solutions)
         </h2>
         <p className="text-gray-700 font-semibold">
@@ -31,7 +31,7 @@ export default function WorkPage() {
 
       {/* Flobiz */}
       <div className="w-full border rounded-lg shadow-lg p-4 sm:p-6">
-        <h2 className="font-bold text-xl text-blue-600">
+        <h2 className="text-xl text-blue-600">
           Flobiz (Fintech Startup - 1M DAU)
         </h2>
         <p className="text-gray-700 font-semibold">
