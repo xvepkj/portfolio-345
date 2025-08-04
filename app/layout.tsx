@@ -21,11 +21,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const [isFunky, setIsFunky] = useState(false);
 
   return (
-    <html lang="en" className={isFunky ? "funky-bg" : "bg-white"} style={{ colorScheme: "light" }}>
-      <body className={`${isFunky ? funkyFont.className : robotoMono.className} text-black flex flex-col min-h-screen`}>
+    <html lang="en" style={{ colorScheme: "light" }}>
+      <body
+        className={`${isFunky 
+          ? `funky-bg ${funkyFont.className} text-white` 
+          : `${robotoMono.className} text-black`
+        } flex flex-col min-h-screen`}
+      >
         <FunkyContext.Provider value={{ isFunky, toggleFunky: () => setIsFunky(p => !p) }}>
           <Navbar />
-          <main className="flex-grow flex items-center justify-center">
+          <main className={`flex-grow flex items-center justify-center ${isFunky ? 'bg-transparent' : 'bg-white'}`}>
             {children}
           </main>
           <Footer />

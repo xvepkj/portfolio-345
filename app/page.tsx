@@ -14,30 +14,44 @@ export default function HomePage() {
     ? "bg-transparent border-none shadow-none"
     : "border shadow-md bg-white";
 
-  const imageProps = {
-    placeholder: "empty" as const,
-    style: { backgroundColor: "transparent" },
-    className: "bg-transparent",
-  };
+  const sizeMultiplier = isFunky ? 1.4 : 1; // 40% bigger in funky mode
 
   return (
     <div className="flex flex-col md:flex-row gap-6 items-center justify-center px-6 sm:px-8 md:px-12 py-6">
 
       {/* Mobile Developer */}
       <div className={`px-6 sm:px-8 py-10 sm:py-12 w-72 text-center flex flex-col items-center justify-center ${cardStyle}`}>
-        <Image src={iconPath("mobile")} alt="Mobile Developer" width={100} height={100} {...imageProps} />
+        <Image
+          src={iconPath("mobile")}
+          alt="Mobile Developer"
+          width={100 * sizeMultiplier}
+          height={100 * sizeMultiplier}
+          className="bg-transparent"
+        />
         <p className="text-2xl font-medium">Mobile developer</p>
       </div>
 
       {/* Competitive Programmer */}
       <div className={`px-6 sm:px-8 py-10 sm:py-12 w-65 text-center flex flex-col items-center justify-center ${cardStyle}`}>
-        <Image src={iconPath("pc")} alt="Competitive Programmer" width={80} height={80} {...imageProps} />
+        <Image
+          src={iconPath("pc")}
+          alt="Competitive Programmer"
+          width={80 * sizeMultiplier}
+          height={80 * sizeMultiplier}
+          className="bg-transparent"
+        />
         <p className="text-2xl font-medium">Competitive programmer</p>
       </div>
 
       {/* Game Developer */}
       <div className={`px-5 sm:px-6 py-8 sm:py-10 w-55 text-center flex flex-col items-center justify-center ${cardStyle}`}>
-        <Image src={iconPath("game")} alt="Game Developer" width={55} height={55} {...imageProps} />
+        <Image
+          src={iconPath("game")}
+          alt="Game Developer"
+          width={55 * sizeMultiplier}
+          height={55 * sizeMultiplier}
+          className="bg-transparent"
+        />
         <p className="text-xl font-medium">Game developer</p>
       </div>
     </div>
