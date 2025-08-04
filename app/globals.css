@@ -87,3 +87,11 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
+.work-funky-bg {
+  background-image: url('/bg-6-funky.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
