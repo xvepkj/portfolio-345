@@ -63,10 +63,19 @@ body {
 
 /* Funky background mode */
 .funky-bg {
-  background-image: url('/bg-3-funky.jpg');
+  background-image: url('/bg-4-funky.jpg');
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: black;
 
   --foreground: #ffffff; 
+  color: #ffffff; /* ensure text is pure white */
+}
+
+.funky-bg * {
+  font-weight: 800; /* make text bold */
+  color: #fff; /* force text white */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* shadow for better contrast */
 }
