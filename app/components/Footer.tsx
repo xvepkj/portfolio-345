@@ -23,7 +23,7 @@ export default function Footer() {
         href="mailto:pkjrockzz@gmail.com"
         className={`hover:${isFunky ? "text-yellow-300" : "text-blue-500"}`}
       >
-        pkjrockzz@gmail.com
+        prathamkumarjha@gmail.com
       </a>
     </footer>
   );
