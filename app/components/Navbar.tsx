@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useContext } from 'react';
+import { FunkyContext } from '../layout'; // import context from RootLayout
 
-export default function Navbar({ isFunky, toggleFunky }: { isFunky: boolean; toggleFunky: () => void }) {
+export default function Navbar() {
   const pathname = usePathname();
+  const { isFunky, toggleFunky } = useContext(FunkyContext);
 
   const linkStyle = (path: string) =>
     pathname === path ? 'text-blue-500' : 'hover:text-blue-500';
