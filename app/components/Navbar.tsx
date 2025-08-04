@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function Navbar() {
+export default function Navbar({ isFunky, toggleFunky }: { isFunky: boolean; toggleFunky: () => void }) {
   const pathname = usePathname();
 
   const linkStyle = (path: string) =>
@@ -14,6 +14,13 @@ export default function Navbar() {
       <Link href="/" className={linkStyle('/')}>Home</Link>
       <Link href="/projects" className={linkStyle('/projects')}>Projects</Link>
       <Link href="/work" className={linkStyle('/work')}>Work</Link>
+
+      <button 
+        onClick={toggleFunky}
+        className="px-3 py-1 border rounded hover:bg-gray-200 text-sm"
+      >
+        {isFunky ? "Professional Mode" : "Fun Mode 🎛"}
+      </button>
     </nav>
   );
 }
