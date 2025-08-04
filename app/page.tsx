@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useContext } from "react";
-import { FunkyContext } from "./layout"; // adjust path if needed
+import { FunkyContext } from "./layout";
 
 export default function HomePage() {
   const { isFunky } = useContext(FunkyContext);
@@ -16,9 +16,14 @@ export default function HomePage() {
 
   const sizeMultiplier = isFunky ? 1.4 : 1; // 40% bigger in funky mode
 
+  // Outline for funky mode
+  const iconClass = isFunky
+    ? "bg-transparent drop-shadow-[0_0_2px_white] drop-shadow-[0_0_4px_white]"
+    : "bg-transparent";
+
   return (
     <div className="flex flex-col md:flex-row gap-6 items-center justify-center px-6 sm:px-8 md:px-12 py-6">
-
+      
       {/* Mobile Developer */}
       <div className={`px-6 sm:px-8 py-10 sm:py-12 w-72 text-center flex flex-col items-center justify-center ${cardStyle}`}>
         <Image
@@ -26,7 +31,7 @@ export default function HomePage() {
           alt="Mobile Developer"
           width={100 * sizeMultiplier}
           height={100 * sizeMultiplier}
-          className="bg-transparent"
+          className={iconClass}
         />
         <p className="text-2xl font-medium">Mobile developer</p>
       </div>
@@ -38,7 +43,7 @@ export default function HomePage() {
           alt="Competitive Programmer"
           width={80 * sizeMultiplier}
           height={80 * sizeMultiplier}
-          className="bg-transparent"
+          className={iconClass}
         />
         <p className="text-2xl font-medium">Competitive programmer</p>
       </div>
@@ -50,7 +55,7 @@ export default function HomePage() {
           alt="Game Developer"
           width={55 * sizeMultiplier}
           height={55 * sizeMultiplier}
-          className="bg-transparent"
+          className={iconClass}
         />
         <p className="text-xl font-medium">Game developer</p>
       </div>

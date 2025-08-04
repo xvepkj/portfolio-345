@@ -79,3 +79,11 @@ body {
   color: #fff; /* force text white */
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* shadow for better contrast */
 }
+
+.projects-funky-bg {
+  background-image: url('/bg-5-funky.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
