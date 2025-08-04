@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext } from "react";
-import { FunkyContext } from "../layout";
+import { FunkyContext } from "../FunkyContext";
 
 export default function Footer() {
   const { isFunky } = useContext(FunkyContext);

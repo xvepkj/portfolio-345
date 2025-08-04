@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useContext } from 'react';
-import { FunkyContext } from '../layout'; // import context from RootLayout
+import { FunkyContext } from '../FunkyContext'; // import context from RootLayout
 
 export default function Navbar() {
   const pathname = usePathname();

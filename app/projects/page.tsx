@@ -1,7 +1,7 @@
 'use client';
 
 import { useContext, useEffect } from "react";
-import { FunkyContext } from "../layout";
+import { FunkyContext } from "../FunkyContext"; // Adjust the import path as needed
 
 export default function ProjectsPage() {
   const { isFunky } = useContext(FunkyContext);

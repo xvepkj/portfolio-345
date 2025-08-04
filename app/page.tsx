@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useContext } from "react";
-import { FunkyContext } from "./layout";
+import { FunkyContext } from "./FunkyContext";
 
 export default function HomePage() {
   const { isFunky } = useContext(FunkyContext);

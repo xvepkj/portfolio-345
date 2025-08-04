@@ -1,7 +1,7 @@
 'use client';
 
 import { useContext, useEffect } from "react";
-import { FunkyContext } from "../layout";
+import { FunkyContext } from "../FunkyContext";
 
 export default function WorkPage() {
   const { isFunky } = useContext(FunkyContext);
