@@ -1,16 +1,33 @@
+'use client';
+
+import { useContext, useEffect } from "react";
+import { FunkyContext } from "../FunkyContext";
+
 export default function WorkPage() {
+  const { isFunky } = useContext(FunkyContext);
+
+  // Apply funky background to body
+  useEffect(() => {
+    if (isFunky) {
+      document.body.classList.add("work-funky-bg");
+    } else {
+      document.body.classList.remove("work-funky-bg");
+    }
+    return () => document.body.classList.remove("work-funky-bg");
+  }, [isFunky]);
+
   return (
     <main className="flex flex-col items-center gap-12 py-8 sm:py-12 px-4 sm:px-6 md:px-0 max-w-4xl mx-auto">
 
       {/* ParallelDots */}
-      <div className="w-full border rounded-lg shadow-lg p-4 sm:p-6">
-        <h2 className="text-xl text-blue-600">
+      <div className={`w-full border rounded-lg shadow-lg p-4 sm:p-6 ${isFunky ? "border-white bg-black/60 text-white" : ""}`}>
+        <h2 className={`text-xl ${isFunky ? "text-white drop-shadow-[0_0_5px_white]" : "text-blue-600"}`}>
           ParallelDots (US Retail Solutions)
         </h2>
-        <p className="text-gray-700 font-semibold">
+        <p className={`font-semibold ${isFunky ? "text-white" : "text-gray-700"}`}>
           Software Engineer • September 2023 - Present
         </p>
-        <ul className="list-disc ml-5 mt-2 space-y-2 text-sm text-gray-800">
+        <ul className={`list-disc ml-5 mt-2 space-y-2 text-sm ${isFunky ? "text-white" : "text-gray-800"}`}>
           <li>
             Designed and developed Android core features in the Shelfwatch app, including automatic image capture, blur detection,
             smart cropping, overlap tracking, and tilt detection, enhancing retail store planning for major US CPG clients.
@@ -30,14 +47,14 @@ export default function WorkPage() {
       </div>
 
       {/* Flobiz */}
-      <div className="w-full border rounded-lg shadow-lg p-4 sm:p-6">
-        <h2 className="text-xl text-blue-600">
+      <div className={`w-full border rounded-lg shadow-lg p-4 sm:p-6 ${isFunky ? "border-white bg-black/60 text-white" : ""}`}>
+        <h2 className={`text-xl ${isFunky ? "text-white drop-shadow-[0_0_5px_white]" : "text-blue-600"}`}>
           Flobiz (Fintech Startup - 1M DAU)
         </h2>
-        <p className="text-gray-700 font-semibold">
+        <p className={`font-semibold ${isFunky ? "text-white" : "text-gray-700"}`}>
           Software Engineer • May 2022 - December 2022
         </p>
-        <ul className="list-disc ml-5 mt-2 space-y-2 text-sm text-gray-800">
+        <ul className={`list-disc ml-5 mt-2 space-y-2 text-sm ${isFunky ? "text-white" : "text-gray-800"}`}>
           <li>
             Designed and developed core app functionalities, including Merchant Report Generation and App Paywall, using MVVM modular architecture.
           </li>
@@ -49,10 +66,10 @@ export default function WorkPage() {
           </li>
         </ul>
 
-        <p className="text-gray-700 font-semibold mt-4">
+        <p className={`font-semibold mt-4 ${isFunky ? "text-white" : "text-gray-700"}`}>
           Software Engineering Intern • September 2021 - April 2022
         </p>
-        <ul className="list-disc ml-5 mt-2 space-y-2 text-sm text-gray-800">
+        <ul className={`list-disc ml-5 mt-2 space-y-2 text-sm ${isFunky ? "text-white" : "text-gray-800"}`}>
           <li>
             Developed GST-based data autofill features to streamline user onboarding.
           </li>

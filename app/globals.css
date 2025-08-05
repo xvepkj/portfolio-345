@@ -17,10 +17,81 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 } */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.funky-mode * {
+  font-size: 0.8em !important; /* force scale for all child elements */
+  line-height: 1.2 !important;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.funky-mode * {
+  font-size: 1.1em !important; /* force scale for all child elements */
+  line-height: 1.6 !important;
+}
+
+/* Funky background mode */
+.funky-bg {
+  background-image: url('/bg-4-funky.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+
+  --foreground: #ffffff; 
+  color: #ffffff; /* ensure text is pure white */
+}
+
+.funky-bg * {
+  font-weight: 800; /* make text bold */
+  color: #fff; /* force text white */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* shadow for better contrast */
+}
+
+.projects-funky-bg {
+  background-image: url('/bg-7-funky.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.work-funky-bg {
+  background-image: url('/bg-6-funky.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
